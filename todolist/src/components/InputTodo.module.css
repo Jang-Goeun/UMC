@@ -1,0 +1,45 @@
+.InputTodo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textbar {
+  margin-right: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  width: 300px;
+  height: 35px;
+  border-color: #7070ba;
+}
+
+.submitbutton {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #ffffff;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 20px;
+  margin-right: 35px;
+}
+
+.todolist {
+  font-size: 15px;
+  color: #000000;
+  padding: 0 30px;
+  width: 260px;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: #868686;
+  cursor: pointer;
+  font-size: 15px;
+}

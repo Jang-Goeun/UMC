@@ -1,0 +1,72 @@
+body {
+    background-color: #ecf0f6;
+    width: auto;
+}
+
+.study-body {
+    width: 600px;
+}
+
+.study-title {
+    margin: 50px;
+}
+
+input {
+    font-size: 10px;
+    width: 440px;
+    height: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+input:focus {
+    border-color: blue;
+    outline: none;
+}
+
+.study-todolist, .study-donelist {
+    display: inline-block;
+    width: 180px;
+    
+    font-size: 13px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+.study-todolist {
+    margin-right: 30px;
+}
+
+.study-donelist {
+    margin-left: 30px;
+}
+
+table {
+    width: 170px;
+    margin-top: 35px;
+    border-collapse: collapse;
+}
+
+#list-title, hr, tr {
+    border-bottom: solid #bbd2ea 2px;
+}
+
+td {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+td#todo-item {
+    text-align: left;
+}
+td#btn {
+    text-align: right;
+}
+button {
+    padding: 3px;
+    font-size: 10px;
+    background-color: #bbd2ea;
+    border: none;
+}

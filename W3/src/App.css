@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: hsl(233, 43%, 16%);
+  color: white;
+  button {
+    cursor: pointer;
+  }
+  a {
+    cursor: pointer;
+  }
+}

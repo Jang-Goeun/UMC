@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #acd8e6;
+    height: 100vh; /* 화면 전체 높이만큼 설정하여 세로 중앙 정렬 */
+    margin: 0; /* body의 기본 margin 제거 */
+}
+
+.join-form { 
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #dff0f5;
+}
+
+p {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+table {
+    width: 230px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-top: 1px solid white;
+}
+ 
+span {
+    color : #dff0f5;
+}
+
+td { 
+    font-size: 9px;
+    font-weight: bolder;
+    padding: 7px;
+}
+
+td > input {
+    background-color: #dff0f5;
+    border: 1px solid white;
+}
+
+#submitBtn {
+    padding: 7px 60px; 
+    font-size: 9px;
+    background-color: #808080;
+    color: white; 
+    border: none;  
+    border-radius: 3px;
+}

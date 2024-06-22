@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div align="center" class="join-form">
+        <form>
+            <p>회원가입</p>
+            <table>
+                <tr>
+                    <td>
+                        이름
+                        <br>
+                        <input type="text" id="name">
+                        <br>
+                        <span id="name-check">이름 형식 체크</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        이메일
+                        <br>
+                        <input type="email" id="email">
+                        <br>
+                        <span id="email-check">이메일 형식 체크</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        나이
+                        <br>
+                        <input type="text" id="age">
+                        <br>
+                        <span id="age-check">나이 형식 체크</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        비밀번호
+                        <br>
+                        <input type="password" id="passwd">
+                        <br>
+                        <span id="pw-check">비밀번호 형식 체크</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        비밀번호 확인
+                        <br>
+                        <input type="password" id="passwd-check">
+                        <br>
+                        <span id="check-pw-check">비밀번호 확인 형식 체크</span>
+                    </td>
+                </tr>
+            </table>
+            <caption style="caption-side: bottom;">
+                <button id="submitBtn">가입하기</button>
+            </caption>
+        </form>
+    </div>
+    <script src="./src/index.js"></script>
+</body>
+</html>

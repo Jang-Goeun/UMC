@@ -1,0 +1,59 @@
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+  background-color: #22254b; 
+}
+
+.poster-container {
+  position: relative; /* 부모 요소에 상대 위치 설정 */
+  width: 200px; /* 각 포스터 컨테이너의 너비 */
+  margin-top: 10px; /* 아래 여백 추가 */
+  margin-bottom: 10px; /* 아래 여백 추가 */
+  display: flex;
+  flex-direction: column; /* 내부 요소들을 가로로 배치 */
+}
+
+.poster-container img {
+  width: 100%; /* 이미지 너비를 부모 요소에 맞게 설정 */
+}
+
+.poster-container .text { 
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between; 
+  color: white;
+  background-color: #373b69;
+  height: 80px;
+}
+
+span{margin: 10px;}
+
+.overview {
+  font-size: 12px;
+  display: none; /* 기본적으로 숨김 */
+}
+
+#overview-title {
+  margin: 15px;
+  margin-top: 30px;
+}
+
+#overview-info {
+  margin: 15px;
+  text-align: justify; 
+  max-height: 9em; /* 최대 9줄의 높이 지정 */
+  overflow: hidden; /* 영역을 넘어간 부분을 숨김 */
+  text-overflow: ellipsis; /* 텍스트가 생략될 때 ...으로 표시 */
+}
+
+.poster-container:hover .overview {
+  display: block; /* 포스터 컨테이너에 마우스를 올렸을 때 보이도록 변경 */
+  position: absolute; /* Overview에 대해 절대 위치 설정 */
+  top: 0; /* 부모 요소의 위쪽으로부터의 거리 */
+  left: 0; /* 부모 요소의 왼쪽으로부터의 거리 */
+  width: 100%; /* Overview의 너비를 부모 요소와 동일하게 설정 */
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8); /* 배경색 및 투명도 설정 */
+}
