@@ -1,32 +1,55 @@
 import { createSlice } from "@reduxjs/toolkit";
+import cartItems from "../constants/cartItems";
 
-let nextId = 0;
-const initialState = [];
+const initialState = {
+  cart: cartItems,
+  totalAmount: 12,
+  totalPrice: 276000,
+};
 
-export const todoSlice = createSlice({
-  name: "todofunction",
+export const cartSlice = createSlice({
+  name: "cartfunction",
   initialState,
   reducers: {
-    add: (state, action) => {
-      nextId++;
-      state.push({
-        id: nextId,
-        text: action.payload,
-        complete: false,
-      });
+    increase: (state, action) => {
+      const item = state.cart.find((e) => e.id === action.payload);
+      item.amount++;
+      state.totalAmount++;
+      state.totalPrice += parseInt(item.price);
+    },
+    decrease: (state, action) => {
+      const item = state.cart.find((e) => e.id === action.payload);
+      if (item.amount > 1) {
+        item.amount--;
+        state.totalAmount--;
+        state.totalPrice -= parseInt(item.price);
+      } else {
+        state.cart = state.cart.filter((e) => e.id !== action.payload);
+        state.totalPrice -= parseInt(item.price);
+        state.totalAmount--;
+      }
     },
     remove: (state, action) => {
-      return state.filter((e) => e.id !== action.payload);
+      state.cart = state.cart.filter((e) => e.id !== action.payload);
     },
-
-    complete: (state, action) => {
-      return state.map((e) =>
-        e.id === action.payload ? { ...e, complete: !e.complete } : e
+    clear: (state, action) => {
+      state.cart = [];
+      state.totalPrice = 0;
+      state.totalAmount = 0;
+    },
+    calculateTotals: (state, action) => {
+      state.totalPrice = state.cart.reduce(
+        (total, item) => total + item.price * item.amount,
+        0
+      );
+      state.totalAmount = state.cart.reduce(
+        (total, item) => total + item.amount,
+        0
       );
     },
   },
 });
 
-export const { add, remove, complete } = todoSlice.actions;
-//store에서 add, remove, complte 액션을 내보낸다.
-export default todoSlice.reducer;
+export const { increase, decrease, remove, clear, calculateTotals } =
+  cartSlice.actions;
+export default cartSlice.reducer;
